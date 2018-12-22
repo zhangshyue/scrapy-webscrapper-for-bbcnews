@@ -13,13 +13,14 @@ BOT_NAME = 'bbcnews'
 
 SPIDER_MODULES = ['bbcnews.spiders']
 NEWSPIDER_MODULE = 'bbcnews.spiders'
-log_file_path = "bbcnews/log/bbcnews.log"
 
 MONGO_URI='localhost'
-MONGO_DB='tutorial'
-#ITEM_PIPELINES={ 'bbcnews.pipelines.BbcnewsPipeline':300}
+MONGO_DB='tutorial'#db name
+ITEM_PIPELINES={ 'bbcnews.pipelines.BbcnewsPipeline':300}
+
+log_file_path = "bbcnews/log/bbcnews.log"
 LOG_LEVEL="WARNING"
-LOG_FILE=log_file_path
+LOG_FILE=log_file_path #can be helpful while debugging
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'bbcnews (+http://www.yourdomain.com)'
 USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
