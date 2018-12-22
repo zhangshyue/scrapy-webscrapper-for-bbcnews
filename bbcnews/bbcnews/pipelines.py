@@ -6,6 +6,7 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
 
+#insert parsed data into mongodb
 class BbcnewsPipeline(object):
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri=mongo_uri
@@ -23,7 +24,7 @@ class BbcnewsPipeline(object):
         self.db=self.client[self.mongo_db]
 
     def process_item(self, item, spider):
-        name = "bbcnews"
+        name = "bbcnews"#name of the collection
         self.db[name].insert(dict(item))
         return item
 
