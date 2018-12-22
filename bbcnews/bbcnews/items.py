@@ -17,11 +17,7 @@ class BbcnewsItem(scrapy.Item):
     time=scrapy.Field()
     related_topics=scrapy.Field()
 
-class BbcscienceItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+class BbcmediaItem(scrapy.Item):
+    url=scrapy.Field()
     title=scrapy.Field()
     type=scrapy.Field()
-    url=scrapy.Field()
-    time=scrapy.Field()
-    related_topics=scrapy.Field()
